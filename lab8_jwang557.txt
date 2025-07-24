@@ -1,0 +1,40 @@
+
+PLAY [Configure OPS445 Lab VM] *************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [vmlab]
+
+TASK [update Apache httpd to latest] *******************************************
+ok: [vmlab]
+
+TASK [ensure EPEL repository is installed] *************************************
+ok: [vmlab]
+
+TASK [remove tree package if installed] ****************************************
+ok: [vmlab]
+
+TASK [set system hostname] *****************************************************
+ok: [vmlab]
+
+TASK [create a new user with sudo (wheel) access] ******************************
+ok: [vmlab]
+
+TASK [copy SSH public key for new user] ****************************************
+ok: [vmlab]
+
+TASK [create ops445 directory for new user] ************************************
+ok: [vmlab]
+
+TASK [create lab1 to lab8 directories for new user] ****************************
+ok: [vmlab] => (item=lab1)
+ok: [vmlab] => (item=lab2)
+ok: [vmlab] => (item=lab3)
+ok: [vmlab] => (item=lab4)
+ok: [vmlab] => (item=lab5)
+ok: [vmlab] => (item=lab6)
+ok: [vmlab] => (item=lab7)
+ok: [vmlab] => (item=lab8)
+
+PLAY RECAP *********************************************************************
+vmlab                      : ok=9    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
